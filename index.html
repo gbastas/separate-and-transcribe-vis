@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Audio Player</title>
+    <title>Guitar String Separation Audio Player</title>
 </head>
 <body>
 
-    <h1>Audio Playback</h1>
-    <p>Click play to listen:</p>
+    <h1>Guitar String Separation Audio Player</h1>
 
-    <audio controls>
-        <source src="mixture.wav" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <h2>🎸 Ground Truth</h2>
+    <p>A</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav"></audio>
+    <p>B</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav" type="audio/wav"></audio>
+    <p>D</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/D.wav" type="audio/wav"></audio>
+    <p>E</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav"></audio>
+    <p>G</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/G.wav" type="audio/wav"></audio>
+    <p>e</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/e.wav" type="audio/wav"></audio>
+
+    <h2>🎵 Mixture (Input)</h2>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav"></audio>
+
+    <h2>🔮 Predictions</h2>
+    <p>mixture_A</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav"></audio>
+    <p>mixture_B</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav"></audio>
+    <p>mixture_D</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav"></audio>
+    <p>mixture_E</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav"></audio>
+    <p>mixture_G</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav"></audio>
+    <p>mixture_e</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav"></audio>
+    <p>mixture_pred</p>
+    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_pred.wav" type="audio/wav"></audio>
 
 </body>
 </html>
