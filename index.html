@@ -20,6 +20,19 @@
         .audio-box {
             text-align: center;
         }
+        .control-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .control-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -31,91 +44,115 @@
         <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav">
     </audio>
 
-    <h2>🎸 Ground Truth</h2>
+    <h2>🎸 Ground Truth (Sorted E A D G B e)</h2>
     <div class="audio-container">
         <div class="audio-box">
-            <p>A</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>B</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>D</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/D.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>E</p>
-            <audio controls>
+            <p>E (Low)</p>
+            <audio controls id="ground_E">
                 <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav">
             </audio>
         </div>
         <div class="audio-box">
+            <p>A</p>
+            <audio controls id="ground_A">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>D</p>
+            <audio controls id="ground_D">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/D.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
             <p>G</p>
-            <audio controls>
+            <audio controls id="ground_G">
                 <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/G.wav" type="audio/wav">
             </audio>
         </div>
         <div class="audio-box">
-            <p>e</p>
-            <audio controls>
+            <p>B</p>
+            <audio controls id="ground_B">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>e (High)</p>
+            <audio controls id="ground_e">
                 <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/e.wav" type="audio/wav">
             </audio>
         </div>
     </div>
 
-    <h2>🔮 Predictions</h2>
+    <h2>🔮 Predictions (Sorted E A D G B e)</h2>
+
+    <!-- Play/Stop Button for All Predictions -->
+    <button class="control-button" onclick="togglePredictions()">Play / Stop Predictions</button>
+
     <div class="audio-container">
         <div class="audio-box">
-            <p>A</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>B</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>D</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav">
-            </audio>
-        </div>
-        <div class="audio-box">
-            <p>E</p>
-            <audio controls>
+            <p>mixture_E</p>
+            <audio id="pred_E">
                 <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav">
             </audio>
         </div>
         <div class="audio-box">
-            <p>G</p>
-            <audio controls>
+            <p>mixture_A</p>
+            <audio id="pred_A">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_D</p>
+            <audio id="pred_D">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_G</p>
+            <audio id="pred_G">
                 <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav">
             </audio>
         </div>
         <div class="audio-box">
-            <p>e</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav">
+            <p>mixture_B</p>
+            <audio id="pred_B">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav">
             </audio>
         </div>
         <div class="audio-box">
-            <p>mixture reconstruction</p>
-            <audio controls>
-                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_pred.wav" type="audio/wav">
+            <p>mixture_e</p>
+            <audio id="pred_e">
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav">
             </audio>
         </div>
     </div>
+
+    <script>
+        let playing = false;
+
+        function togglePredictions() {
+            const predictions = [
+                document.getElementById("pred_E"),
+                document.getElementById("pred_A"),
+                document.getElementById("pred_D"),
+                document.getElementById("pred_G"),
+                document.getElementById("pred_B"),
+                document.getElementById("pred_e"),
+            ];
+
+            if (!playing) {
+                predictions.forEach(audio => {
+                    audio.currentTime = 0; // Reset to start
+                    audio.play();
+                });
+                playing = true;
+            } else {
+                predictions.forEach(audio => audio.pause());
+                playing = false;
+            }
+        }
+    </script>
 
 </body>
 </html>
