@@ -4,43 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitar String Separation Audio Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .audio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .audio-box {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Guitar String Separation Audio Player</h1>
 
-    <h2>🎸 Ground Truth</h2>
-    <p>A</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav"></audio>
-    <p>B</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav" type="audio/wav"></audio>
-    <p>D</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/D.wav" type="audio/wav"></audio>
-    <p>E</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav"></audio>
-    <p>G</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/G.wav" type="audio/wav"></audio>
-    <p>e</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/e.wav" type="audio/wav"></audio>
-
     <h2>🎵 Mixture (Input)</h2>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav"></audio>
+    <audio controls>
+        <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav">
+    </audio>
+
+    <h2>🎸 Ground Truth</h2>
+    <div class="audio-container">
+        <div class="audio-box">
+            <p>A</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>B</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>D</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/D.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>E</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>G</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/G.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>e</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/e.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
 
     <h2>🔮 Predictions</h2>
-    <p>mixture_A</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav"></audio>
-    <p>mixture_B</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav"></audio>
-    <p>mixture_D</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav"></audio>
-    <p>mixture_E</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav"></audio>
-    <p>mixture_G</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav"></audio>
-    <p>mixture_e</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav"></audio>
-    <p>mixture_pred</p>
-    <audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_pred.wav" type="audio/wav"></audio>
+    <div class="audio-container">
+        <div class="audio-box">
+            <p>mixture_A</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_B</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_D</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_E</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_G</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_e</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div class="audio-box">
+            <p>mixture_pred</p>
+            <audio controls>
+                <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_pred.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
 
 </body>
 </html>
