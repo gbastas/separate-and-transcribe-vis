@@ -51,13 +51,18 @@
     <audio controls>
         <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav">
     </audio>
-    
+
     <p>Microphone Recording</p>
     <audio controls>
         <source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav" type="audio/wav">
     </audio>
 
-    <h2>🎸 Ground Truth (Guitar String Channels: E A D G B e)</h2>
+    <p>GSCustomMic</p>
+    <audio controls>
+        <source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav" type="audio/wav">
+    </audio>
+
+    <h2>🎸 Ground Truth (Sorted E A D G B e)</h2>
     <div class="audio-container">
         <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav"></audio></div>
         <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/A.wav" type="audio/wav"></audio></div>
@@ -69,22 +74,17 @@
 
     <h2>🔮 Predictions (Hexaphonic Pickup)</h2>
     <div class="audio-container">
-        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav"></audio></div>
         <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav"></audio></div>
     </div>
 
     <h2>🔮 Predictions (Microphone Recording)</h2>
     <div class="audio-container">
-        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_E.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_A.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_D.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_G.wav" type="audio/wav"></audio></div>
         <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_B.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_e.wav" type="audio/wav"></audio></div>
+    </div>
+
+    <h2>🔮 Predictions (GSCustomMic)</h2>
+    <div class="audio-container">
+        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_B.wav" type="audio/wav"></audio></div>
     </div>
 
     <h2>🎛️ Waveforms for String B</h2>
@@ -104,13 +104,19 @@
             <div id="waveform-B-mic" class="waveform"></div>
             <button class="control-button" onclick="togglePlay('B-mic')">Play / Stop</button>
         </div>
+        <div class="audio-box">
+            <p>Prediction (GSCustomMic B)</p>
+            <div id="waveform-B-gscustmic" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('B-gscustmic')">Play / Stop</button>
+        </div>
     </div>
 
     <script>
         const files = {
             "B-ground": "audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav",
             "B-hex": "audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav",
-            "B-mic": "audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_B.wav"
+            "B-mic": "audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_B.wav",
+            "B-gscustmic": "audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_B.wav"
         };
 
         let players = {};
