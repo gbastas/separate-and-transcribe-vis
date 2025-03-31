@@ -137,13 +137,13 @@
         .ascii-art {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 50px;
             font-family: monospace;
             white-space: pre;
             color: #333;
         }
     </style>
-    
+
     <h2>🎸 Ground Truth (for all strings)</h2>
     <div class="audio-container">
         <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/E.wav" type="audio/wav"></audio></div>
@@ -182,6 +182,51 @@
         <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_G.wav" type="audio/wav"></audio></div>
         <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_B.wav" type="audio/wav"></audio></div>
         <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_e.wav" type="audio/wav"></audio></div>   
+    </div>
+
+
+
+    <h2>🎵 Solo Performance Example</h2>
+    <p> Hexaphonic Pickup Input (Normalized and Debleeded Sources) </p>
+    <audio controls>
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_hex/mixture.wav" type="audio/wav">
+    </audio>
+
+
+    <h2>🎵 Input Mixtures</h2>
+    <p> Hexaphonic Pickup Raw Input </p>
+    <audio controls>
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mix/mixture.wav" type="audio/wav">
+    </audio>
+
+
+    <p>Microphone Recording</p>
+    <audio controls>
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mic/mixture.wav" type="audio/wav">
+    </audio>
+
+    <h2>🎛️ Waveforms for String B</h2>
+    <div class="audio-container">
+        <div class="audio-box">
+            <p>Ground Truth (B)</p>
+            <div id="waveform-B-ground" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('B-ground')">Play / Stop</button>
+        </div>
+        <div class="audio-box">
+            <p>Prediction (Hex B)</p>
+            <div id="waveform-B-hex" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('B-hex')">Play / Stop</button>
+        </div>
+        <div class="audio-box">
+            <p>Prediction (Mic B)</p>
+            <div id="waveform-B-mic" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('B-mic')">Play / Stop</button>
+        </div>
+        <div class="audio-box">
+            <p>Prediction (GSCustomMic B)</p>
+            <div id="waveform-B-gscustmic" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('B-gscustmic')">Play / Stop</button>
+        </div>
     </div>
 
 
