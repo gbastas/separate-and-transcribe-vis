@@ -70,7 +70,7 @@
                         |!!!!!!|
         </pre>
     </div>
-    
+
     <h2>🎵 Input Mixtures</h2>
     <p> Hexaphonic Pickup Input (Normalized and Debleeded Sources) </p>
     <audio controls>
@@ -92,7 +92,7 @@
     <div class="audio-container">
         <div class="audio-box">
             <p>Ground Truth (B)</p>
-            <div id="waveform-B-ground" class="waveform"></div>
+            <div id="waveform-G-ground" class="waveform"></div>
             <button class="control-button" onclick="togglePlay('B-ground')">Play / Stop</button>
         </div>
         <div class="audio-box">
@@ -138,26 +138,6 @@
     </script>
 
 
-
-
-    <div class="ascii-art">
-        <pre>
-                        q o  o p
-                        q o  o p
-                        d o  o b
-                        \!!!!!!/
-                        |======|
----- STRING LABELS--->  |EADGBe|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-                        |!!!!!!|
-        </pre>
-    </div>
 
     <h2>🎸 Ground Truth (for all strings)</h2>
     <!-- <div class="ascii-art" style="display: inline; font-family: monospace;"> -->
@@ -228,26 +208,49 @@
         <div class="audio-box">
             <p>Ground Truth (B)</p>
             <div id="waveform-B-ground" class="waveform"></div>
-            <button class="control-button" onclick="togglePlay('B-ground')">Play / Stop</button>
+            <button class="control-button" onclick="togglePlay('G-ground-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (Hex B)</p>
-            <div id="waveform-B-hex" class="waveform"></div>
-            <button class="control-button" onclick="togglePlay('B-hex')">Play / Stop</button>
+            <div id="waveform-G-hex" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('G-hex-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (Mic B)</p>
-            <div id="waveform-B-mic" class="waveform"></div>
-            <button class="control-button" onclick="togglePlay('B-mic')">Play / Stop</button>
+            <div id="waveform-G-mic" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('G-mic-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (GSCustomMic B)</p>
-            <div id="waveform-B-gscustmic" class="waveform"></div>
-            <button class="control-button" onclick="togglePlay('B-gscustmic')">Play / Stop</button>
+            <div id="waveform-G-gscustmic" class="waveform"></div>
+            <button class="control-button" onclick="togglePlay('G-gscustmic-mono')">Play / Stop</button>
         </div>
     </div>
 
+    <script>
+        const files_mono = {
+            "G-ground-mono": "audio-separation-examples/00_Funk1-114-Ab_comp_hex/G.wav",
+            "G-hex-mono": "audio-separation-examples/00_Funk1-114-Ab_comp_mix/pred_G.wav",
+            "G-mic-mono": "audio-separation-examples/00_Funk1-114-Ab_comp_mic/pred_G.wav",
+            "G-gscustmic-mono": "audio-separation-examples/00_Funk1-114-Ab_comp_gscustmic/pred_G.wav"
+        };
 
+        let players_mono = {};
+        Object.keys(files).forEach(id => {
+            players[id] = WaveSurfer.create({
+                container: `#waveform-${id}`,
+                waveColor: "blue",
+                progressColor: "red",
+                barWidth: 2,
+                height: 80,
+            });
+            players[id].load(files[id]);
+        });
+
+        function togglePlay(id) {
+            players[id].isPlaying() ? players[id].pause() : players[id].play();
+        }
+    </script>
 
 
 </body>
