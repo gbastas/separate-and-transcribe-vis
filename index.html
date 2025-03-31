@@ -32,6 +32,12 @@
             background-color: #f0f0f0;
             margin-bottom: 10px;
         }
+        .waveform-mono {
+            width: 300px;
+            height: 80px;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+        }        
         .control-button {
             margin-top: 5px;
             padding: 5px 10px;
@@ -265,22 +271,22 @@ LABELS ---> |EADGBe|
     <div class="audio-container">
         <div class="audio-box">
             <p>Ground Truth (B)</p>
-            <div id="waveform-G-ground" class="waveform"></div>
+            <div id="waveform-G-ground" class="waveform-mono"></div>
             <button class="control-button" onclick="togglePlay('G-ground-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (Hex B)</p>
-            <div id="waveform-G-hex" class="waveform"></div>
+            <div id="waveform-G-hex" class="waveform-mono"></div>
             <button class="control-button" onclick="togglePlay('G-hex-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (Mic B)</p>
-            <div id="waveform-G-mic" class="waveform"></div>
+            <div id="waveform-G-mic" class="waveform-mono"></div>
             <button class="control-button" onclick="togglePlay('G-mic-mono')">Play / Stop</button>
         </div>
         <div class="audio-box">
             <p>Prediction (GSCustomMic B)</p>
-            <div id="waveform-G-gscustmic" class="waveform"></div>
+            <div id="waveform-G-gscustmic" class="waveform-mono"></div>
             <button class="control-button" onclick="togglePlay('G-gscustmic-mono')">Play / Stop</button>
         </div>
     </div>
