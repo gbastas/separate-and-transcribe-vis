@@ -49,18 +49,18 @@
     <h2>🎵 Input Mixtures</h2>
     <p> Hexaphonic Pickup Input (Normalized and Debleeded Sources) </p>
     <audio controls>
-        <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture_mono.wav" type="audio/wav">
     </audio>
 
     <p> Hexaphonic Pickup Raw Input </p>
     <audio controls>
-        <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture_mono.wav" type="audio/wav">
     </audio>
 
 
     <p>Microphone Recording</p>
     <audio controls>
-        <source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture_mono.wav" type="audio/wav">
     </audio>
 
     <h2>🎛️ Waveforms for String B</h2>
@@ -90,9 +90,9 @@
     <script>
         const files = {
             "B-ground": "audio-separation-examples/00_BN1-129-Eb_comp_hex/B.wav",
-            "B-hex": "audio-separation-examples/00_BN1-129-Eb_comp_mix/mixture.wav_B.wav",
-            "B-mic": "audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_B.wav",
-            "B-gscustmic": "audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_B.wav"
+            "B-hex": "audio-separation-examples/00_BN1-129-Eb_comp_mix/pred_B.wav",
+            "B-mic": "audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_B.wav",
+            "B-gscustmic": "audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_B.wav"
         };
 
         let players = {};
@@ -153,33 +153,33 @@
     </div>
     <h2>🔮 Predictions (Hexaphonic Pickup)</h2>
     <div class="audio-container">
-        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_E.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_A.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_D.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_G.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_B.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/mixture.wav_e.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_E.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_A.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_D.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_G.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_B.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_hex/pred_e.wav" type="audio/wav"></audio></div>
     </div>
 
     <h2>🔮 Predictions (Microphone Recording)</h2>
     <div class="audio-container">
-        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_E.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_A.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_D.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_G.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_B.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/mixture.wav_e.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_E.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_A.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_D.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_G.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_B.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_mic/pred_e.wav" type="audio/wav"></audio></div>
     </div>
 
 
     <h2>🔮 Predictions (GSCustomMic)</h2>
     <div class="audio-container">
-        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_E.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_A.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_D.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_G.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_B.wav" type="audio/wav"></audio></div>
-        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/mixture.wav_e.wav" type="audio/wav"></audio></div>   
+        <div class="audio-box"><p>E</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_E.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>A</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_A.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>D</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_D.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>G</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_G.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>B</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_B.wav" type="audio/wav"></audio></div>
+        <div class="audio-box"><p>e</p><audio controls><source src="audio-separation-examples/00_BN1-129-Eb_comp_gscustmic/pred_e.wav" type="audio/wav"></audio></div>   
     </div>
 
 
@@ -187,20 +187,18 @@
     <h2>🎵 Solo Performance Example</h2>
     <p> Hexaphonic Pickup Input (Normalized and Debleeded Sources) </p>
     <audio controls>
-        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_hex/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_hex/mixture_mono.wav" type="audio/wav">
     </audio>
 
-
-    <h2>🎵 Input Mixtures</h2>
     <p> Hexaphonic Pickup Raw Input </p>
     <audio controls>
-        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mix/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mix/mixture_mono.wav" type="audio/wav">
     </audio>
 
 
     <p>Microphone Recording</p>
     <audio controls>
-        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mic/mixture.wav" type="audio/wav">
+        <source src="audio-separation-examples/00_Funk1-114-Ab_comp_mic/mixture_mono.wav" type="audio/wav">
     </audio>
 
     <h2>🎛️ Waveforms for String B</h2>
