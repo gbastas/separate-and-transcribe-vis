@@ -288,32 +288,32 @@ LABELS ---> |EADGBe|
     <div class="audio-container">                       
         <div class="audio-box">                       
             <p>Ground Truth (G)</p>                       
-            <div id="waveform-G-ground-mono" class="waveform"></div>                       
-            <button class="control-button" onclick="togglePlay('G-ground-mono')">Play / Stop</button>                       
+            <div id="waveform-Α-ground-mono" class="waveform"></div>                       
+            <button class="control-button" onclick="togglePlaymono('Α-ground-mono')">Play / Stop</button>                       
         </div>                       
         <div class="audio-box">                       
             <p>Prediction (Hex G)</p>                       
-            <div id="waveform-G-hex-mono" class="waveform"></div>                       
-            <button class="control-button" onclick="togglePlay('G-hex-mono')">Play / Stop</button>                       
+            <div id="waveform-Α-hex-mono" class="waveform"></div>                       
+            <button class="control-button" onclick="togglePlaymono('Α-hex-mono')">Play / Stop</button>                       
         </div>                       
         <div class="audio-box">                       
             <p>Prediction (Mic G)</p>                       
-            <div id="waveform-G-mic-mono" class="waveform"></div>                       
-            <button class="control-button" onclick="togglePlay('G-mic-mono')">Play / Stop</button>                       
+            <div id="waveform-Α-mic-mono" class="waveform"></div>                       
+            <button class="control-button" onclick="togglePlaymono('Α-mic-mono')">Play / Stop</button>                       
         </div>                       
         <div class="audio-box">                       
             <p>Prediction (GSCustomMic+MDGP G)</p>                       
-            <div id="waveform-G-gscust-mdgp-mono" class="waveform"></div>                       
-            <button class="control-button" onclick="togglePlay('G-gscust-mdgp-mono')">Play / Stop</button>                       
+            <div id="waveform-Α-gscust-mdgp-mono" class="waveform"></div>                       
+            <button class="control-button" onclick="togglePlaymono('Α-gscust-mdgp-mono')">Play / Stop</button>                       
         </div>                       
     </div>                       
                        
     <script>                       
         const files_mono = {                       
-            "G-ground-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_hex/G.wav",                       
-            "G-hex-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_hex/pred_G.wav",                       
-            "G-mic-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_mic/pred_G.wav",                       
-            "G-gscust-mdgp-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_gscust-mdgp/pred_G.wav"                       
+            "Α-ground-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_hex/Α.wav",                       
+            "Α-hex-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_hex/pred_Α.wav",                       
+            "Α-mic-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_mic/pred_Α.wav",                       
+            "Α-gscust-mdgp-mono": "audio-separation-examples/00_Funk1-114-Ab_solo_gscust-mdgp/pred_Α.wav"                       
         };                       
                        
         let players_mono = {};                       
@@ -328,7 +328,7 @@ LABELS ---> |EADGBe|
             players_mono[id].load(files_mono[id]);                       
         });                       
                        
-        function togglePlay(id) {                       
+        function togglePlaymono(id) {                       
             players_mono[id].isPlaying() ? players_mono[id].pause() : players_mono[id].play();                       
         }                       
     </script>                       
